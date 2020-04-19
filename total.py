@@ -152,7 +152,8 @@ class MyFrame(wx.Frame):
 
             except Exception as e:
                 print("failed: ",e)
-            temp= []
+            message1 = "'"+ message + "'"
+            temp= ['查询语句是'+sql_sen(1)%message1+'操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -174,7 +175,8 @@ class MyFrame(wx.Frame):
 
             except Exception as e:
                 print("failed: ",e)
-            temp= []
+            message1 = "'" + message + "'"
+            temp = ['查询语句是' + sql_sen(2) % message1 + '操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -196,7 +198,8 @@ class MyFrame(wx.Frame):
 
             except Exception as e:
                 print("failed: ",e)
-            temp= []
+            message1 = "'" + message + "'"
+            temp = ['查询语句是' + sql_sen(3) % message1 + '操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -222,7 +225,10 @@ class MyFrame(wx.Frame):
 
             except Exception as e:
                 print("failed: ",e)
-            temp= []
+            message1=[]
+            message1.append( "'" + message[0] + "'")
+            message1.append( "'" + message[1] + "'")
+            temp = ['查询语句是' + sql_sen(4) % (message1[0],message1[1]) + '操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -244,7 +250,8 @@ class MyFrame(wx.Frame):
 
             except Exception as e:
                 print("failed: ",e)
-            temp= []
+            message1 = "'" + message + "'"
+            temp = ['查询语句是' + sql_sen(5) % message1 + '操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -265,7 +272,8 @@ class MyFrame(wx.Frame):
                     print(i)
             except Exception as e:
                 print("failed: ", e)
-            temp = []
+            message1 = "'" + message + "'"
+            temp = ['查询语句是' + sql_sen(6) % message1 + '操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -285,7 +293,8 @@ class MyFrame(wx.Frame):
                     print(i)
             except Exception as e:
                 print("failed: ", e)
-            temp = []
+            message1 = "'" + message + "'"
+            temp = ['查询语句是' + sql_sen(7) % message1 + '操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -306,7 +315,8 @@ class MyFrame(wx.Frame):
 
             except Exception as e:
                 print("failed: ",e)
-            temp= []
+            message1 = "'" + message + "'"
+            temp = ['查询语句是' + sql_sen(8) % message1 + '操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -331,7 +341,10 @@ class MyFrame(wx.Frame):
 
             except Exception as e:
                 print("failed: ",e)
-            temp= []
+            message1 = []
+            message1.append("'" + message[0] + "'")
+            message1.append("'" + message[1] + "'")
+            temp = ['查询语句是' + sql_sen(9) % (message1[0], message1[1]) + '操作结果是']
             for i in range(len(result)):
                 temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
@@ -348,18 +361,28 @@ class MyFrame(wx.Frame):
             data = message.split(",")
             data1 = data[0:6]
             data2 = data[6:12]
+            message2 = message
             message = [tuple(data1),tuple(data2)]
+
             try:
-                 cur.execute(sql_sen(1),message)
+                 cur.execute(sql_sen(10),message)
+                 # db.commit()
                  result = cur.fetchall()
                  for i in result:
                      print(i)
 
             except Exception as e:
                 print("failed: ",e)
-            temp= []
-            for i in range(len(result)):
-                temp += result[i]
+            message1 = []
+            for i in range(6):
+                message1.append("'" + data1[i] + "'")
+            for i in range(6):
+                message1.append("'" + data2[i] + "'")
+            temp = ['语句是' + sql_sen(10) % (message1[0], message1[1],message1[2], message1[3],message1[4], message1[5]) ]
+            temp += ['语句是' + sql_sen(10) % (message1[6], message1[7],message1[8], message1[9],message1[10], message1[11]) + '操作完成']
+
+            # for i in range(len(result)):
+            #     temp += result[i]
             dlg_tip = wx.MessageDialog(None, str(temp), u"操作结果", wx.OK | wx.ICON_INFORMATION)
             if dlg_tip.ShowModal() == wx.ID_OK:
                 # self.Close(True)
@@ -373,15 +396,15 @@ class MyFrame(wx.Frame):
             message = dlg.GetValue()  # 获取文本框中输入的值
             try:
                  cur.execute(sql_sen(11))
-                 db.commit()
+                 # db.commit()
                  result = cur.fetchall()
                  for i in result:
                      print(i)
 
             except Exception as e:
                 print("failed: ",e)
-
-            dlg_tip = wx.MessageDialog(None, "操作完成了", u"操作结果", wx.OK | wx.ICON_INFORMATION)
+            temp = "语句是"+sql_sen(11)+"操作完成了"
+            dlg_tip = wx.MessageDialog(None, temp, u"操作结果", wx.OK | wx.ICON_INFORMATION)
             if dlg_tip.ShowModal() == wx.ID_OK:
                 # self.Close(True)
                 pass
@@ -393,15 +416,15 @@ class MyFrame(wx.Frame):
             message = dlg.GetValue()  # 获取文本框中输入的值
             try:
                  cur.execute(sql_sen(12))
-                 db.commit()
+                 # db.commit()
                  result = cur.fetchall()
                  for i in result:
                      print(i)
 
             except Exception as e:
                 print("failed: ",e)
-
-            dlg_tip = wx.MessageDialog(None, "操作完成了", u"操作结果", wx.OK | wx.ICON_INFORMATION)
+            temp = "语句是" + sql_sen(11) + "操作完成了"
+            dlg_tip = wx.MessageDialog(None, temp, u"操作结果", wx.OK | wx.ICON_INFORMATION)
             if dlg_tip.ShowModal() == wx.ID_OK:
                 # self.Close(True)
                 pass
@@ -418,5 +441,7 @@ if __name__ == '__main__':
 
     frame.Show()
     app.MainLoop()
+    cur.close()
+    db.close()
 
 
