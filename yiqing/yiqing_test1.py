@@ -38,6 +38,11 @@ def decimal_to_int(strtemp):
 # 21更新钱财
 # 22显示全部
 # 232425 删除某个用户
+# 26显示有钱用户
+
+user_id_this = []
+
+
 def sql_sen(num):
     ss = ["insert into user_info(user_name, reg_date, user_type)values (%s,%s,%s);", \
           "select user_info.user_name,user_info.user_id,user_info.user_type from user_info where user_name=%s;", \
@@ -52,18 +57,19 @@ def sql_sen(num):
           "select train_id from train where train_code=%s and train_date_time=%s;", \
           "insert into patient(patient_name, patient_state, patient_date, patient_loc, patient_postcode) VALUES (%s,%s,%s,%s,%s);", \
           "update patient set patient.patient_state=%s where patient.patient_name=%s and patient.patient_date=%s;", \
-          "select patient_id from patient where patient_name=%s and patient_date=%s;",\
-          "insert into bus_patient(bus_id, patient_id) VALUES (%s,%s);",\
-          "insert into patient_flight(patient_id, flight_id) VALUES (%s,%s);",\
-          "insert into patient_train(patient_id, train_id) VALUES (%s,%s);",\
-          "insert into bus(bus_code, bus_date_time) VALUES (%s,%s);",\
-          "insert into flight(flight_code, flight_datenumber) VALUES (%s,%s);",\
-          "insert into train(train_code, train_date_time) VALUES (%s,%s);",\
-          "update user_limit set user_limit.money_left=%s where user_id=%s;",\
-          "select user_info.user_id,user_name,reg_date,password from user_info inner join user_pass up on user_info.user_id = up.user_id;",\
-          "delete from user_pass where user_id=%s;",\
-          "delete from user_limit where user_id=%s;",\
-          "delete from user_info where  user_id=%s;",\
+          "select patient_id from patient where patient_name=%s and patient_date=%s;", \
+          "insert into bus_patient(bus_id, patient_id) VALUES (%s,%s);", \
+          "insert into patient_flight(patient_id, flight_id) VALUES (%s,%s);", \
+          "insert into patient_train(patient_id, train_id) VALUES (%s,%s);", \
+          "insert into bus(bus_code, bus_date_time) VALUES (%s,%s);", \
+          "insert into flight(flight_code, flight_datenumber) VALUES (%s,%s);", \
+          "insert into train(train_code, train_date_time) VALUES (%s,%s);", \
+          "update user_limit set user_limit.money_left=%s where user_id=%s;", \
+          "select user_info.user_id,user_name,reg_date,password from user_info inner join user_pass up on user_info.user_id = up.user_id;", \
+          "delete from user_pass where user_id=%s;", \
+          "delete from user_limit where user_id=%s;", \
+          "delete from user_info where  user_id=%s;", \
+          "select user_info.user_id,user_info.user_name,user_info.reg_date,up.password from user_info inner join user_pass up inner join user_limit  on user_info.user_id = up.user_id and user_limit.user_id=up.user_id where user_limit.money_left>(select money_left from user_limit where user_limit.user_id=1);", \
           ]
     return ss[num - 1]
 
@@ -298,13 +304,16 @@ class First(QMainWindow):
 
     def initUI(self):
         self.btn_register = QPushButton("用户注册", self)
-        self.btn_register.move(30, 50)
+        self.btn_register.move(30, 100)
+        self.btn_register.resize(150, 150)
         self.btn_signin = QPushButton("用户登陆", self)
-        self.btn_signin.move(150, 50)
+        self.btn_signin.resize(150, 150)
+        self.btn_signin.move(300, 100)
 
         self.setGeometry(300, 300, 500, 500)
         self.setWindowTitle('yiqing_system')
         self.show()
+
 
 class REGISTER1(QWidget):
     def __init__(self):
@@ -391,6 +400,7 @@ class REGISTER1(QWidget):
             # self.box.addButton(self.tr("取消"), QMessageBox.NoRole)
             self.box.show()
 
+
 class REGISTER(QWidget):
     def __init__(self):
         super(REGISTER, self).__init__()
@@ -403,7 +413,7 @@ class REGISTER(QWidget):
 
         nameLabel = QLabel("用户名(空格自动去除)")
         self.nameLineEdit = QLineEdit(" ")
-        passLabel = QLabel("密码")
+        passLabel = QLabel("密码(数字、字母组合)")
         self.passLineEdit = QLineEdit(" ")
 
         # layout.setSpacing(10)
@@ -530,11 +540,13 @@ class SIGNIN(QWidget):
                 result1 = cur.fetchall()
                 passget = list(list(result1)[0])[0]
                 usertype = list(list(result)[0])[2]
-                if passget == password and usertype==1: # 1是管理员
+                if passget == password and usertype == 1:  # 1是管理员
                     flag = 1
+                    user_id_this.append(id_temp)
                     print('管理员登陆成功')
-                if passget == password and usertype==0: # 1是管理员
+                if passget == password and usertype == 0:  # 1是管理员
                     flag = 2
+                    user_id_this.append(id_temp)
                     print('普通用户登陆成功')
         except Exception as e:
             print("failed: ", e)
@@ -633,7 +645,7 @@ class DONGTAI(QWidget):
             self.box.exec_()
 
         elif flag == 0:
-            self.box = QMessageBox(QMessageBox.Warning, "这是标题", "对不起由于数据更新，您所指定的日期暂无数据")
+            self.box = QMessageBox(QMessageBox.Warning, "更新情况", "对不起由于数据更新，您所指定的日期暂无数据")
             self.box.addButton(self.tr("确定"), QMessageBox.YesRole)
             self.box.show()
 
@@ -695,7 +707,7 @@ class GUIJI(QWidget):
                 acc = 0
                 for i in range(6):
                     k = abs((int(temp[i]) - int(adcode[i])))
-                    acc += k * math.pow(3, 5 - i)
+                    acc += k * math.pow(2, 5 - i)
                 far_list.append(acc)
             far_list.sort()
             nearest0 = str(far_list[0])
@@ -906,6 +918,7 @@ class ZHUANGTAI(QWidget):
         self.addtr_page = ADDTR()
         self.addtr_page.show()
 
+
 class ADDTR(QWidget):
     def __init__(self):
         super(ADDTR, self).__init__()
@@ -931,7 +944,7 @@ class ADDTR(QWidget):
         # layout.setSpacing(10)
         layout.addWidget(nameLabel, 1, 0)
         layout.addWidget(self.nameLineEdit, 1, 1)
-        layout.addWidget(wayLabel,3,0)
+        layout.addWidget(wayLabel, 3, 0)
         layout.addWidget(self.rb11, 2, 1)
         layout.addWidget(self.rb12, 3, 1)
         layout.addWidget(self.rb13, 4, 1)
@@ -972,37 +985,37 @@ class ADDTR(QWidget):
             flag = 1
         if flag == 0:
             try:
-                message = [name,date]
+                message = [name, date]
                 cur.execute(sql_sen(14), message)
                 # db.commit()
                 result = cur.fetchall()
                 pat_id = list(list(result)[0])[0]
                 if pat_id == ():
-                    flag=2 #2代表没找到患者
+                    flag = 2  # 2代表没找到患者
 
             except Exception as e:
                 print("failed: ", e)
-        if flag==0:# 汽车火车航班
-            if trans_way==0:
-                message = [banci,date]
-                cur.execute(sql_sen(9),message)
+        if flag == 0:  # 汽车火车航班
+            if trans_way == 0:
+                message = [banci, date]
+                cur.execute(sql_sen(9), message)
                 result = cur.fetchall()
-                if result==():
-                    flag=3
-                    cur.execute(sql_sen(18),message)
+                if result == ():
+                    flag = 3
+                    cur.execute(sql_sen(18), message)
                     db.commit()
                 else:
                     banciid = list(list(result)[0])[0]
-                    message = [pat_id,banciid]
-                    cur.execute(sql_sen(15),message)
+                    message = [pat_id, banciid]
+                    cur.execute(sql_sen(15), message)
                     db.commit()
                     print('qiche')
-            elif trans_way==1:
+            elif trans_way == 1:
                 message = [banci, date]
                 cur.execute(sql_sen(11), message)
                 result = cur.fetchall()
-                if result==():
-                    flag=3
+                if result == ():
+                    flag = 3
                     cur.execute(sql_sen(20), message)
                     db.commit()
                 else:
@@ -1011,12 +1024,12 @@ class ADDTR(QWidget):
                     cur.execute(sql_sen(17), message)
                     db.commit()
                     print('huoche')
-            elif trans_way==2:
+            elif trans_way == 2:
                 message = [banci, date]
                 cur.execute(sql_sen(10), message)
                 result = cur.fetchall()
-                if result==():
-                    flag=3 #3表示没找到航班号
+                if result == ():
+                    flag = 3  # 3表示没找到航班号
                     cur.execute(sql_sen(19), message)
                     db.commit()
                 else:
@@ -1026,24 +1039,24 @@ class ADDTR(QWidget):
                     db.commit()
                     print('feiji')
         # 若flag=3 需要先加入班次
-        if flag==3:
-            if trans_way==0:
-                message = [banci,date]
-                cur.execute(sql_sen(9),message)
+        if flag == 3:
+            if trans_way == 0:
+                message = [banci, date]
+                cur.execute(sql_sen(9), message)
                 result = cur.fetchall()
-                if result==():
+                if result == ():
                     print('不可能啊')
                 else:
                     banciid = list(list(result)[0])[0]
-                    message = [pat_id,banciid]
-                    cur.execute(sql_sen(15),message)
+                    message = [pat_id, banciid]
+                    cur.execute(sql_sen(15), message)
                     db.commit()
                     print('qiche')
-            elif trans_way==1:
+            elif trans_way == 1:
                 message = [banci, date]
                 cur.execute(sql_sen(11), message)
                 result = cur.fetchall()
-                if result==():
+                if result == ():
                     print('不可能啊')
                 else:
                     banciid = list(list(result)[0])[0]
@@ -1051,11 +1064,11 @@ class ADDTR(QWidget):
                     cur.execute(sql_sen(17), message)
                     db.commit()
                     print('huoche')
-            elif trans_way==2:
+            elif trans_way == 2:
                 message = [banci, date]
                 cur.execute(sql_sen(10), message)
                 result = cur.fetchall()
-                if result==():
+                if result == ():
                     print('不可能啊')
                 else:
                     banciid = list(list(result)[0])[0]
@@ -1081,6 +1094,7 @@ class ADDTR(QWidget):
             self.box.addButton(self.tr("确定"), QMessageBox.YesRole)
             self.box.show()
 
+
 class USER_CONTROL(QWidget):
     def __init__(self):
         super().__init__()
@@ -1095,37 +1109,82 @@ class USER_CONTROL(QWidget):
         btn_2 = QPushButton('增加一名用户')
         btn_3 = QPushButton('修改用户余额')
         btn_4 = QPushButton('删除用户')
+        btn_5 = QPushButton('查看当前所有有钱用户')
         layout = QGridLayout()
         layout.addWidget(btn_1, 1, 0)
         layout.addWidget(btn_2, 2, 0)
         layout.addWidget(btn_3, 3, 0)
         layout.addWidget(btn_4, 4, 0)
+        layout.addWidget(btn_5, 5, 0)
+
         self.setLayout(layout)
         btn_1.clicked.connect(self.aa)
         btn_2.clicked.connect(self.bb)
         btn_3.clicked.connect(self.cc)
         btn_4.clicked.connect(self.dd)
+        btn_5.clicked.connect(self.ee)
 
     def aa(self):
         print('展示')
         self.showall_page = SHOWALL()
         self.showall_page.show()
+
     def bb(self):
         self.reg_page = REGISTER1()
         self.reg_page.show()
+
     def cc(self):
         print(2)
         self.yue_page = YUE()
         self.yue_page.show()
+
     def dd(self):
         self.del_page = USERDEL()
         self.del_page.show()
 
+    def ee(self):
+        print('展示')
+        self.showall_page1 = SHOWALL1()
+        self.showall_page1.show()
+
+
+class SHOWALL1(QWidget):
+    def __init__(self):
+        super(SHOWALL1, self).__init__()
+
+        self.initUI()
+
+    def initUI(self):
+        self.setWindowTitle("所有用户")
+        self.resize(1000, 800)
+        try:
+            cur.execute(sql_sen(26))
+            result = cur.fetchall()
+            print(result)
+
+        except Exception as e:
+            print("failed: ", e)
+
+        layout = QHBoxLayout()
+        print(len(result))
+        TableWidget = QTableWidget(len(result), 4)
+        TableWidget.setHorizontalHeaderLabels(['id', '用户名', '注册日期', '密码'])
+        # TableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        for i in range(len(result)):
+            for j in range(4):
+                temp = list(list(result)[i])[j]
+                if type(temp) == 'str':
+                    newItem = QTableWidgetItem(temp)
+                else:
+                    newItem = QTableWidgetItem(str(temp))
+                TableWidget.setItem(i, j, newItem)
+        layout.addWidget(TableWidget)
+        self.setLayout(layout)
 
 
 class SHOWALL(QWidget):
     def __init__(self):
-        super(SHOWALL,self).__init__()
+        super(SHOWALL, self).__init__()
 
         self.initUI()
 
@@ -1143,23 +1202,23 @@ class SHOWALL(QWidget):
         layout = QHBoxLayout()
         print(len(result))
         TableWidget = QTableWidget(len(result), 4)
-        TableWidget.setHorizontalHeaderLabels(['id', '用户名', '注册日期','密码'])
+        TableWidget.setHorizontalHeaderLabels(['id', '用户名', '注册日期', '密码'])
         # TableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         for i in range(len(result)):
             for j in range(4):
                 temp = list(list(result)[i])[j]
-                if type(temp)=='str':
+                if type(temp) == 'str':
                     newItem = QTableWidgetItem(temp)
                 else:
                     newItem = QTableWidgetItem(str(temp))
-                TableWidget.setItem(i,j,newItem)
+                TableWidget.setItem(i, j, newItem)
         layout.addWidget(TableWidget)
         self.setLayout(layout)
 
 
 class USERDEL(QWidget):
     def __init__(self):
-        super(USERDEL,self).__init__()
+        super(USERDEL, self).__init__()
 
         self.initUI()
 
@@ -1173,7 +1232,6 @@ class USERDEL(QWidget):
 
         layout.addWidget(nameLabel, 1, 0)
         layout.addWidget(self.nameLineEdit, 1, 1)
-
 
         layout.setColumnStretch(1, 10)
         save_Btn = QPushButton('确定')
@@ -1189,7 +1247,7 @@ class USERDEL(QWidget):
         name = self.nameLineEdit.text()  # 获取文本框内容
         name = name.strip()
 
-        cur.execute(sql_sen(2),name)
+        cur.execute(sql_sen(2), name)
         result = cur.fetchall()
         if result == ():
             print('对不起没有找到这个用户')
@@ -1200,11 +1258,11 @@ class USERDEL(QWidget):
         else:
             id_temp = list(list(result)[0])[1]
 
-            cur.execute(sql_sen(23),id_temp)
+            cur.execute(sql_sen(23), id_temp)
             db.commit()
-            cur.execute(sql_sen(24),id_temp)
+            cur.execute(sql_sen(24), id_temp)
             db.commit()
-            cur.execute(sql_sen(25),id_temp)
+            cur.execute(sql_sen(25), id_temp)
             db.commit()
             self.box = QMessageBox(QMessageBox.Warning, "成功", "您已经成功删除了这名用户！")
             self.box.addButton(self.tr("确定"), QMessageBox.YesRole)
@@ -1212,9 +1270,74 @@ class USERDEL(QWidget):
             self.box.show()
 
 
+class ZHUAN(QWidget):
+    def __init__(self):
+        super().__init__()
 
+        self.initUI()
 
+    def initUI(self):
+        layout = QGridLayout()
+        self.setWindowTitle('给用户转账')
+        self.setGeometry(600, 600, 800, 800)
 
+        nameLabel = QLabel("请输入要转账的用户名")
+        self.nameLineEdit = QLineEdit("test")
+        leftLabel = QLabel("请输入转入金额")
+        self.yueLineEdit = QLineEdit('10')
+        layout.addWidget(nameLabel, 1, 0)
+        layout.addWidget(self.nameLineEdit, 1, 1)
+        layout.addWidget(leftLabel, 2, 0)
+        layout.addWidget(self.yueLineEdit, 2, 1)
+
+        layout.setColumnStretch(1, 10)
+        save_Btn = QPushButton('确定')
+        cancle_Btn = QPushButton('取消')
+        cancle_Btn.clicked.connect(self.close)
+        save_Btn.clicked.connect(self.zhanshi)
+        save_Btn.clicked.connect(self.close)
+        layout.addWidget(save_Btn)
+        layout.addWidget(cancle_Btn)
+        self.setLayout(layout)
+
+    def zhanshi(self):
+        name = self.nameLineEdit.text()  # 获取文本框内容
+        money = self.yueLineEdit.text()
+        name = name.strip()
+        money = money.strip()
+        flag = 0
+        cur.execute(sql_sen(2), name)
+        result = cur.fetchall()
+        if result == ():
+            print('对不起没有找到这个用户')
+        else:
+            id_temp = list(list(result)[0])[1]
+            # 接下来就是转账操作了
+            message1 = [money, id_temp]
+            message2 = [money, user_id_this[-1]]
+            sql_1 = "update user_limit set user_limit.money_left=user_limit.money_left+%s where user_id=%s;"
+            sql_2 = "update user_limit set user_limit.money_left=user_limit.money_left-%s where user_id=%s;"
+            try:
+                cur.execute(sql_2, message2)
+                # 先减，判断下是否减溢出了，如果有抛出错误
+                cur.execute(sql_1, message1)
+            except Exception as e:
+                db.rollback()  # 事务回滚
+                print('事务处理失败', e)
+                flag = 1
+            else:
+                db.commit()  # 事务提交
+                print('事务处理成功', cur.rowcount)
+                flag = 2
+
+        if flag == 1:
+            self.box = QMessageBox(QMessageBox.Warning, "失败", "事务处理失败！")
+            self.box.addButton(self.tr("确定"), QMessageBox.YesRole)
+            self.box.show()
+        elif flag==2:
+            self.box = QMessageBox(QMessageBox.Warning, "成功", "转账成功！")
+            self.box.addButton(self.tr("确定"), QMessageBox.YesRole)
+            self.box.show()
 
 
 class YUE(QWidget):
@@ -1251,16 +1374,16 @@ class YUE(QWidget):
         name = self.nameLineEdit.text()  # 获取文本框内容
         yue = self.yueLineEdit.text()
         name = name.strip()
-        yue =yue.strip()
+        yue = yue.strip()
 
-        cur.execute(sql_sen(2),name)
+        cur.execute(sql_sen(2), name)
         result = cur.fetchall()
         if result == ():
             print('对不起没有找到这个用户')
         else:
             id_temp = list(list(result)[0])[1]
-            message = [yue,id_temp]
-            cur.execute(sql_sen(21),message)
+            message = [yue, id_temp]
+            cur.execute(sql_sen(21), message)
             result = cur.fetchall()
             db.commit()
             self.box = QMessageBox(QMessageBox.Warning, "成功", "您已经成功修改余额！")
@@ -1268,9 +1391,10 @@ class YUE(QWidget):
             # self.box.addButton(self.tr("取消"), QMessageBox.NoRole)
             self.box.show()
 
+
 class MENU_STRICT(QWidget):
     def __init__(self):
-        super(MENU_STRICT,self).__init__()
+        super(MENU_STRICT, self).__init__()
 
         self.initUI()
 
@@ -1282,17 +1406,24 @@ class MENU_STRICT(QWidget):
         btn_2 = QPushButton('轨迹查询')
         btn_3 = QPushButton('同行程查询')
         btn_4 = QPushButton('病例分布')
+        btn_5 = QPushButton('用户转账')
         layout = QGridLayout()
         layout.addWidget(btn_1, 1, 0)
         layout.addWidget(btn_2, 2, 0)
         layout.addWidget(btn_3, 3, 0)
         layout.addWidget(btn_4, 4, 0)
+        layout.addWidget(btn_5, 5, 0)
+
         self.setLayout(layout)
         btn_1.clicked.connect(self.dynamic_show)
         btn_2.clicked.connect(self.guiji_show)
         btn_3.clicked.connect(self.trip_show)
         btn_4.clicked.connect(self.fenbu)
+        btn_5.clicked.connect(self.zhuanzhang)
 
+    def zhuanzhang(self):
+        self.zhuangz_page = ZHUAN()
+        self.zhuangz_page.show()
 
     def dynamic_show(self):
         self.dongtai_page = DONGTAI()
@@ -1311,7 +1442,6 @@ class MENU_STRICT(QWidget):
         self.fenbu_page.show()
 
 
-
 class MENU(QWidget):
     def __init__(self):
         super().__init__()
@@ -1328,6 +1458,7 @@ class MENU(QWidget):
         btn_4 = QPushButton('病例分布')
         btn_5 = QPushButton('患者状态更新维护')
         btn_6 = QPushButton('用户管理')
+
         layout = QGridLayout()
         layout.addWidget(btn_1, 1, 0)
         layout.addWidget(btn_2, 2, 0)
@@ -1366,8 +1497,6 @@ class MENU(QWidget):
     def fenbu(self):
         self.fenbu_page = FENBU()
         self.fenbu_page.show()
-
-
 
 
 class CHANGE(QMainWindow):
