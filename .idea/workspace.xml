@@ -4,7 +4,6 @@
     <list default="true" id="545cfdf0-5400-437f-be0b-979a1c4cf313" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yiqing/yiqing.html" beforeDir="false" afterPath="$PROJECT_DIR$/yiqing/yiqing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yiqing/yiqing_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/yiqing/yiqing_test1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,41 +13,45 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$project3_test2.coverage" NAME="project3_test2 Coverage Results" MODIFIED="1585566143770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_3" />
+    <SUITE FILE_PATH="coverage/HITSZ_DATABASE$noise_dealing.coverage" NAME="noise_dealing Coverage Results" MODIFIED="1588744548698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$111.coverage" NAME="111 Coverage Results" MODIFIED="1585209655004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HITSZ_DATABASE$noise_dealing_cv.coverage" NAME="noise_dealing_cv Coverage Results" MODIFIED="1588748526296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$project2_withgui.coverage" NAME="project2_withgui Coverage Results" MODIFIED="1585191995928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1585655575794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_3" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$total.coverage" NAME="total Coverage Results" MODIFIED="1585657951032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$project3_test1.coverage" NAME="project3_test1 Coverage Results" MODIFIED="1587183774423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_3" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$class2.coverage" NAME="class2 Coverage Results" MODIFIED="1585143725978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$project3_pretest.coverage" NAME="project3_pretest Coverage Results" MODIFIED="1585550213041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/HITSZ_DATABASE$yiqing_test1.coverage" NAME="yiqing_test1 Coverage Results" MODIFIED="1587965279128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yiqing" />
+    <SUITE FILE_PATH="coverage/HITSZ_DATABASE$yiqing_test1.coverage" NAME="yiqing_test1 Coverage Results" MODIFIED="1588519330615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yiqing" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$test3.coverage" NAME="test3 Coverage Results" MODIFIED="1585190608694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$inputtest.coverage" NAME="inputtest Coverage Results" MODIFIED="1585190363970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$gaode.coverage" NAME="gaode Coverage Results" MODIFIED="1587468667416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HITSZ_DATABASE$lsb_yinxie.coverage" NAME="lsb_yinxie Coverage Results" MODIFIED="1588733167826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HITSZ_DATABASE$lookup1.coverage" NAME="lookup1 Coverage Results" MODIFIED="1587181726739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_3" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="631633459">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="20" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MainWindow - untitled" value="1" />
           <entry key="html" value="2" />
-          <entry key="py" value="35" />
+          <entry key="py" value="42" />
           <entry key="sql" value="5" />
         </counts>
       </usages-collector>
@@ -56,19 +59,19 @@
         <counts>
           <entry key="HTML" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="35" />
+          <entry key="Python" value="42" />
           <entry key="SQL" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="213" />
-          <entry key="py" value="10722" />
+          <entry key="py" value="11007" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="10935" />
+          <entry key="Python" value="11220" />
         </counts>
       </usages-collector>
     </session>
@@ -76,59 +79,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yiqing/yiqing_test1.py">
+        <entry file="file://$PROJECT_DIR$/gaode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="1578" selection-start-line="1578" selection-end-line="1578" />
+            <state relative-caret-position="110">
+              <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lsb_yinxie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/noise_dealing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-154">
+              <caret line="5" selection-start-line="5" selection-end-line="6" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1587705977850" expanded="true" signature="530:572" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="896:10786" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="4032:6645" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="6666:10786" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="8363:9235" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="8363:9277" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="11287:14179" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="20274:20583" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="32792:39237" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="40215:40286" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="41644:46871" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="41754:41763" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="46890:49960" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="49516:49591" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="51038:51120" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="51145:51228" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="51251:51328" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="51349:51350" ph="..." />
-                <marker date="1587705977850" expanded="true" signature="51440:51513" ph="..." />
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/noise_dealing_cv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test3.py">
+        <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/PIL/ImageFilter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/2007074149/PyQt5/QtWidgets/QPushButton.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4730">
-              <caret line="220" column="8" selection-start-line="220" selection-start-column="8" selection-end-line="220" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gaode.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            <state relative-caret-position="4204">
+              <caret line="246" column="14" selection-start-line="246" selection-start-column="14" selection-end-line="246" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -136,7 +132,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/total.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
+            <state relative-caret-position="6248">
               <caret line="335" column="12" selection-start-line="335" selection-start-column="12" selection-end-line="342" selection-end-column="35" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -191,6 +187,11 @@
       <find>MENU</find>
       <find>money</find>
       <find>user_id_this</find>
+      <find>filterargs</find>
+      <find>DETAIL</find>
+      <find>BuiltinFilter</find>
+      <find>medfilt2d</find>
+      <find>sigtools</find>
     </findStrings>
     <replaceStrings>
       <replace>num</replace>
@@ -215,6 +216,9 @@
         <option value="$PROJECT_DIR$/data_3/project3_test1.py" />
         <option value="$PROJECT_DIR$/gaode.py" />
         <option value="$PROJECT_DIR$/yiqing/yiqing_test1.py" />
+        <option value="$PROJECT_DIR$/lsb_yinxie.py" />
+        <option value="$PROJECT_DIR$/noise_dealing.py" />
+        <option value="$PROJECT_DIR$/noise_dealing_cv.py" />
       </list>
     </option>
   </component>
@@ -224,7 +228,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1302" />
@@ -238,7 +242,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,20 +249,11 @@
               <item name="HITSZ_DATABASE" type="b2602c69:ProjectViewProjectNode" />
               <item name="HITSZ_DATABASE" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="HITSZ_DATABASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HITSZ_DATABASE" type="462c0819:PsiDirectoryNode" />
-              <item name="data_3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HITSZ_DATABASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HITSZ_DATABASE" type="462c0819:PsiDirectoryNode" />
-              <item name="yiqing" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,7 +274,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.yiqing_test1">
+  <component name="RunManager" selected="Python.noise_dealing_cv">
     <configuration name="gaode" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HITSZ_DATABASE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -303,51 +297,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lookup1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="HITSZ_DATABASE" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_3/lookup1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="project3_test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="HITSZ_DATABASE" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_3/project3_test1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="total" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lsb_yinxie" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HITSZ_DATABASE" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -360,7 +310,51 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/total.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lsb_yinxie.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="noise_dealing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HITSZ_DATABASE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/noise_dealing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="noise_dealing_cv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HITSZ_DATABASE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/noise_dealing_cv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -392,19 +386,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.total" />
-      <item itemvalue="Python.project3_test1" />
-      <item itemvalue="Python.lookup1" />
       <item itemvalue="Python.yiqing_test1" />
       <item itemvalue="Python.gaode" />
+      <item itemvalue="Python.lsb_yinxie" />
+      <item itemvalue="Python.noise_dealing" />
+      <item itemvalue="Python.noise_dealing_cv" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.noise_dealing_cv" />
+        <item itemvalue="Python.noise_dealing" />
+        <item itemvalue="Python.lsb_yinxie" />
         <item itemvalue="Python.yiqing_test1" />
         <item itemvalue="Python.gaode" />
-        <item itemvalue="Python.project3_test1" />
-        <item itemvalue="Python.lookup1" />
-        <item itemvalue="Python.total" />
       </list>
     </recent_temporary>
   </component>
@@ -422,14 +416,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="813" extended-state="6" />
+    <frame x="-6" y="-6" width="1293" height="813" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2242915" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23562753" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32844576" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22727273" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -443,7 +437,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.76437247" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -521,24 +515,32 @@
           <line>548</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/noise_dealing.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/noise_dealing_cv.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="str(result)" language="Python" />
-        <watch expression="list(result)" language="Python" />
-        <watch expression="list(result)[0]" language="Python" />
-        <watch expression="list(list(result)[0])[0]" language="Python" />
-        <watch expression="list(list(result)[0])[1]" language="Python" />
-        <watch expression="result" language="Python" />
-        <watch expression="len(result)" language="Python" />
-        <watch expression="user_id_this" language="Python" />
         <watch expression="map_data" language="Python" />
+        <watch expression="img.mode" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>img.mode</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>user_id_this</expression-string>
         <language-id>Python</language-id>
@@ -581,11 +583,6 @@
       </expression>
       <expression>
         <expression-string>result.size()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>result==[]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -712,6 +709,23 @@
     <entry file="file://$PROJECT_DIR$/yiqing.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/yiqing/yiqing_test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34386">
+          <caret line="1578" selection-start-line="1578" selection-end-line="1578" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/2007074149/PyQt5/QtWidgets/QPushButton.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4730">
@@ -719,15 +733,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ques_1.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ques_2.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/total.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
+        <state relative-caret-position="6248">
           <caret line="335" column="12" selection-start-line="335" selection-start-column="12" selection-end-line="342" selection-end-column="35" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -743,46 +751,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yiqing/yiqing_test1.py">
+    <entry file="file://$PROJECT_DIR$/ques_1.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ques_2.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="1578" selection-start-line="1578" selection-end-line="1578" />
+        <state relative-caret-position="110">
+          <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/PIL/ImageFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4204">
+          <caret line="246" column="14" selection-start-line="246" selection-start-column="14" selection-end-line="246" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="1367" column="40" selection-start-line="1367" selection-start-column="40" selection-end-line="1367" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/scipy/signal/signaltools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-242">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lsb_yinxie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noise_dealing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="5" selection-start-line="5" selection-end-line="6" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1587705977850" expanded="true" signature="530:572" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="896:10786" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="4032:6645" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="6666:10786" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="8363:9235" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="8363:9277" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="11287:14179" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="20274:20583" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="32792:39237" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="40215:40286" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="41644:46871" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="41754:41763" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="46890:49960" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="49516:49591" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="51038:51120" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="51145:51228" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="51251:51328" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="51349:51350" ph="..." />
-            <marker date="1587705977850" expanded="true" signature="51440:51513" ph="..." />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test3.py">
+    <entry file="file://$PROJECT_DIR$/noise_dealing_cv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gaode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="131">
+          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
