@@ -5,3 +5,6 @@
 
 # total是homework2的带gui版本
 ##  代码复用极低
+
+
+## answer.c究极答案ok
